@@ -1,0 +1,168 @@
+/* src/components/Header/Header.css */
+.header {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.header-title {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease;
+}
+
+.title-emoji {
+  display: inline-block;
+  margin: 0 15px;
+  animation: bounce 2s infinite;
+}
+
+.header-subtitle {
+  font-size: 1.4rem;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.95;
+  animation: fadeInUp 1s ease 0.3s both;
+}
+
+.music-button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background: white;
+  border: none;
+  border-radius: 50px;
+  color: #ff6b8b;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease 0.6s both;
+}
+
+.music-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.flower-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.flower {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 3s infinite ease-in-out;
+}
+
+.flower1 { top: 20px; left: 10%; animation-delay: 0s; }
+.flower2 { top: 40px; right: 15%; animation-delay: 0.5s; }
+.flower3 { bottom: 30px; left: 20%; animation-delay: 1s; }
+.flower4 { bottom: 20px; right: 10%; animation-delay: 1.5s; }
+.flower5 { top: 50%; left: 5%; animation-delay: 2s; }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+  
+  .flower {
+    font-size: 1.5rem;
+  }
+}
+
+.youtube-player-container {
+  margin: 25px auto 0;
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(255, 107, 139, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  animation: fadeIn 0.5s ease;
+}
+
+.music-button {
+  margin-top: 30px;
+  padding: 14px 35px;
+  font-size: 1.15rem;
+  background: white;
+  border: none;
+  border-radius: 50px;
+  color: #ff6b8b;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.music-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 139, 0.4);
+  border-color: #ffb6c1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
