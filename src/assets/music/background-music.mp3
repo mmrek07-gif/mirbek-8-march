@@ -1,0 +1,2 @@
+// Временно для теста
+audioRef.current = new Audio('https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav');
